@@ -1,0 +1,134 @@
+.flood-relief-container{
+    margin-top: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    background-color: #fdfdfd;
+    color: #333;
+  }
+  /* Hide slick slider dots */
+.flood-relief-slide + .slick-dots,
+.slick-dots {
+  display: none !important;
+}
+
+  .flood-relief-left{
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .flood-relief-slide img {
+    width: 400px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .flood-releif-right{
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .flood-relief-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b48a3c;
+    margin-bottom: 10px;
+  }
+  
+  .flood-description {
+    font-size: 1.1rem;
+    color: #58677c;
+    margin-bottom: 25px;
+  }
+  
+  .flood-section {
+    margin-bottom: 25px;
+  }
+  
+  .flood-subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #b48a3c;
+    margin-bottom: 10px;
+  }
+  
+  .flood-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .flood-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #444;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .flood-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #d9534f;
+  }
+  
+  .flood-impact {
+    line-height: 1.7;
+    color: #58677c;
+  }
+  
+  .flood-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .flood-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .donate-btn,
+  .flood-submit-btn{
+    flex: 1;    
+    background-color: #D1AC36;           /* both take equal width */
+    height: 50px;          /* same height */
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #9B0000;
+    border: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .donate-btn:hover {
+    background-color: #96752d;
+  }
+  
+  .flood-submit-btn:hover {
+    background-color: #b48a3c;
+
+  }
+  
+  @media (max-width: 900px) {
+    .flood-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .flood-left,
+    .flood-right {
+      max-width: 100%;
+    }
+  }
+  

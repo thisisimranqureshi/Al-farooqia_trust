@@ -1,0 +1,288 @@
+.general-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------------- Headings ---------------- */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* ---------------- Sections ---------------- */
+.section {
+  margin-bottom: 25px;
+}
+
+/* ---------------- Option Buttons ---------------- */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-option {
+  padding: 10px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.btn-option:hover {
+  background: #c44848;
+}
+
+.btn-option.selected {
+  background: #9b0000;
+  color: #fff;
+  border-color: #9b0000;
+}
+
+/* ---------------- Toggle Buttons ---------------- */
+.icon-toggle-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.icon-toggle {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  background: #fafafa;
+}
+
+.icon-toggle:hover {
+  background: #f0f0f0;
+}
+
+.icon-toggle.active {
+  background: #9b0000;
+  color: #fff;
+  border-color: #9b0000;
+}
+
+/* ---------------- File Upload Box ---------------- */
+.file-upload-card {
+  border: 2px dashed #c6c6c6;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.file-upload-card:hover {
+  border-color: #9b0000;
+  background: #fff6f6;
+}
+
+/* ---------------- Inputs ---------------- */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #9b0000;
+  outline: none;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* ---------------- Labels ---------------- */
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ---------------- Errors ---------------- */
+.error {
+  color: #d00000;
+  font-size: 13px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+/* ---------------- Button Group ---------------- */
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* Submit Button */
+button.submit {
+  background: #9b0000;
+  color: #fff;
+}
+
+button.submit:hover {
+  opacity: 0.9;
+}
+
+/* Edit Button */
+button.edit {
+  background: #ffc107;
+  color: #fff;
+}
+
+button.edit:hover {
+  opacity: 0.9;
+}
+
+
+
+/* ---------------- Preview Images ---------------- */
+.preview-image-small {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 100px;
+}
+
+/* Proof Images Container */
+.proof-images-preview {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.proof-images-preview img {
+  margin: 5px;
+}
+
+/* ---------------- GPS Capture Button ---------------- */
+.capture-location {
+  background: #9b0000;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.capture-location:hover {
+  opacity: 0.9;
+}
+
+/* ---------------- Review Section ---------------- */
+.review-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.review-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.review-section h3 {
+  margin-bottom: 12px;
+  color: #9b0000;
+  font-size: 18px;
+}
+
+.review-field {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Review images */
+.review-img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  margin: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.review-proof-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Review button group */
+.review-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.review-btn-group .btn {
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ---------------- Mobile Responsive ---------------- */
+@media (max-width: 768px) {
+  .button-group,
+  .icon-toggle-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .preview-image-small {
+    margin-left: 0;
+  }
+}
+.input-subtitle {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-top: 2px;
+  font-weight: 400;
+}

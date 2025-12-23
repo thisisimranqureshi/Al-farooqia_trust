@@ -1,0 +1,167 @@
+/* Modal background overlay */
+.approve-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* slightly darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Modal content box */
+.add-modal-content {
+  background: #fff; /* clean light background */
+  padding: 25px 30px;
+  width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Close button top-right */
+button.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.close-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Section for each grant */
+.grant-section {
+  border: 1px solid #ddd;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  margin-bottom: 15px;
+}
+
+/* Installment rows */
+.installment-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.installment-row span {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Paid installments highlight */
+.payment-info {
+  background-color: #e0f7fa; /* light cyan */
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: #006064;
+}
+
+/* Inputs */
+input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+/* Payment form styling */
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid #ccc;
+  margin-top: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+/* Headings */
+h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+h4 {
+  margin-bottom: 12px;
+  color: #444;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+/* Buttons styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.edit-total-btn {
+  background-color: #28a745;
+}
+
+button.edit-total-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Button rows */
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  .installment-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .button-row {
+    flex-direction: column;
+  }
+}

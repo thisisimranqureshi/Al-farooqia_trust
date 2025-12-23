@@ -1,0 +1,72 @@
+.Home-volunteer-section {
+    top:100px;
+    position: relative;
+    background-color: #B7833A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 250px;
+    overflow: hidden;
+    bottom: 100px;
+  
+    /* 🎨 Add stylish red diagonal lines */
+    background-image: 
+      repeating-linear-gradient(
+        135deg,
+        rgba(211, 47, 47, 0.15) 0px,
+        rgba(211, 47, 47, 0.15) 2px,
+        transparent 2px,
+        transparent 20px
+      );
+  }
+  
+  .volunteer-left h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    max-width: 500px;
+  }
+  
+  .volunteer-right {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  
+  .contact-item .highlight {
+    color: #d32f2f; /* red accent */
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .Home-volunteer-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px 30px;
+      background-position: center bottom;
+    }
+  
+    .volunteer-right {
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 20px;
+    }
+  
+    .volunteer-left h2 {
+      font-size: 1.6rem;
+    }
+  }
+  

@@ -1,0 +1,152 @@
+:root {
+  --primary-color: #B01030;
+  --accent-gold: #d4af37;
+  --text-dark: #1a1a1a;
+  --text-medium: #333;
+  --bg-light: #fafafa;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Main Layout ===== */
+.event-detail {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 5px 25px var(--shadow);
+  position: relative;
+}
+
+/* ===== Heading ===== */
+.event-detail h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-gold), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Date & Time ===== */
+.event-date {
+  text-align: center;
+  font-size: 1.1rem;
+ 
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.15),
+    rgba(176, 16, 48, 0.08)
+  );
+  border-left: 4px solid var(--accent-gold);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 10px auto 40px;
+}
+
+/* ===== Image Gallery ===== */
+.event-images-gallery {
+  display: grid;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.images-1 { grid-template-columns: 1fr; }
+.images-2 { grid-template-columns: repeat(2, 1fr); }
+.images-3, .images-6-plus { grid-template-columns: repeat(3, 1fr); }
+.images-4 { grid-template-columns: repeat(2, 1fr); }
+
+.event-detail-img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: 0.3s ease;
+}
+
+.event-detail-img:hover {
+  transform: scale(1.03);
+  border-color: var(--accent-gold);
+}
+
+/* ===== Description ===== */
+.event-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding: 25px;
+  background: var(--bg-light);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+/* ===== Explanation Box ===== */
+.event-explanation {
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  border: 1px solid var(--accent-gold);
+  border-radius: 14px;
+  padding: 40px;
+  color: #f0f0f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-explanation h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent-gold), var(--primary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+
+
+.event-explanation p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+/* ===== Loading State ===== */
+.event-detail p:only-child {
+  text-align: center;
+  color: var(--text-medium);
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 100px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .event-detail {
+    padding: 40px 15px;
+  }
+
+  .event-detail h2 {
+    font-size: 2rem;
+  }
+
+  .event-detail-img {
+    height: 250px;
+  }
+
+  .event-description {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .event-explanation {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,52 @@
+/* Floating round button */
+#google_translate_element {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    font-size: 0; /* hide text */
+  }
+  
+  /* Globe Icon */
+  #google_translate_element::before {
+    content: "🌐";
+    font-size: 28px;
+    display: inline-block;
+    animation: rotate 10s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Hide all Google injected text */
+  .goog-te-gadget-simple {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0 !important;
+  }
+  
+  /* Hide the Powered by Google link/logo */
+  .goog-logo-link,
+  .goog-te-gadget span,
+  .goog-te-gadget .goog-te-menu-value {
+    display: none !important;
+  }
+  
+  /* Hide dropdown if you want icon only, or leave it visible */
+  .goog-te-combo {
+    display: none !important;
+  }
+  

@@ -1,0 +1,160 @@
+.home-relief-slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.home-relief-slide {
+  display: flex;
+  flex-direction: row; 
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left red section */
+.home-relief-overlay {
+  background: #b01030;
+  width: 55%;
+  height: 100%;
+  padding: 90px 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Text styling */
+.home-relief-text {
+  max-width: 700px;
+}
+
+.home-relief-help-badge {
+  background: transparent;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 2px solid gold;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-relief-help-badge::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  top: -3px;
+  border: 2px solid gold;
+  border-radius: 50px;
+  opacity: 0.6;
+}
+
+/* Headings */
+.title-ur {
+  font-size: 3.3rem;
+  line-height: 1.4;
+  font-weight: 900;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.text-en {
+  font-size: 1.5rem;
+  line-height: 1.9;
+  font-family: "Open Sans", sans-serif;
+}
+
+.relief-btn {
+  background: gold;
+  border: none;
+  color: #b00000;
+  padding: 18px 45px;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.relief-btn:hover {
+  background: #d8b300;
+  transform: translateY(-2px);
+}
+
+/* Right side image */
+.home-relief-image {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.home-relief-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 768px) {
+  .home-relief-slide {
+    flex-direction: row; 
+    height: 70vh; 
+  }
+
+  .home-relief-overlay {
+    width: 55%;
+    padding: 30px 20px;
+  }
+
+  .title-ur {
+    font-size: 1.7rem;
+  }
+
+  .text-en {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .relief-btn {
+    padding: 10px 22px;
+    font-size: 1rem;
+  }
+
+  .home-relief-image {
+    width: 45%;
+  }
+
+  .home-relief-image img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .home-relief-slide {
+    height: 60vh;
+  }
+
+  .home-relief-overlay {
+    padding: 25px 15px;
+  }
+
+  .title-ur {
+    font-size: 1.4rem;
+  }
+
+  .text-en {
+    font-size: 0.9rem;
+  }
+}

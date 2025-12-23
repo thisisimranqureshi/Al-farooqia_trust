@@ -1,0 +1,64 @@
+.event-modal {
+    position: fixed;
+     left: 0; right: 0; bottom: 0;
+   
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+  }
+  
+  .event-modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .event-modal-content h2 {
+    color: #bb8c4a;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  input, textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .date-time-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .submit-btn {
+    background-color: #bb8c4a;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff0000;
+  }
+  
+  .cancel-btn {
+    background-color: #ccc;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .add-form-group textarea{
+    height: 200px;
+  }
+  

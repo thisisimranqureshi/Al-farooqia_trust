@@ -1,0 +1,200 @@
+/* FloodReliefForm.css - improved label styles + focus/required visuals */
+
+.flood-container {
+  max-width: 760px;
+  margin: 36px auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: #b01030;            
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Form layout */
+.flood-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Form group */
+.flood-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ===== LABELS (improved) ===== */
+.flood-form label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #3a2b2b;            /* dark-ish text for label */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* required indicator helper: add class "required" to label in JSX to show asterisk */
+.flood-form label.required::after {
+  content: "*";
+  color: #b01030;            /* red asterisk */
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+/* Input, select, textarea styles */
+.flood-form input[type="text"],
+.flood-form input[type="number"],
+.flood-form input[type="tel"],
+.flood-form input[type="file"],
+.flood-form select,
+.flood-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  font-size: 14px;
+  background: #fff;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.06s;
+  outline: none;
+}
+
+/* File input: smaller font and pointer */
+.flood-form input[type="file"] {
+  padding: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* textarea min height */
+.flood-form textarea {
+  min-height: 88px;
+  resize: vertical;
+  line-height: 1.45;
+}
+
+/* Focus states */
+.flood-form input:focus,
+.flood-form select:focus,
+.flood-form textarea:focus {
+  border-color: #b01030;
+  box-shadow: 0 6px 18px rgba(176,16,48,0.06);
+  transform: translateY(-1px);
+}
+
+/* Small helper / hint text */
+.field-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+}
+
+.btn.next {
+  background-color: #d4af37;  /* gold */
+  color: #121212;
+  width: 100%;
+  transition: background 0.18s ease, transform 0.06s;
+}
+
+.btn.next:hover {
+  background-color: #b01030;  /* primary on hover */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Review box */
+.review-box {
+  background: #fbfbfb;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 16px;
+}
+
+.review-box p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Buttons group on review */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.btn.edit {
+  background-color: #8a0d26;
+  color: #fff;
+}
+
+.btn.submit {
+  background-color: #d4af37;
+  color: #121212;
+}
+
+/* ===== Uploaded files list ===== */
+.upload-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.upload-list li {
+  list-style: none;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  font-size: 13px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* small remove button for each file */
+.file-remove {
+  background: transparent;
+  border: none;
+  color: #b01030;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .flood-container {
+    margin: 18px;
+    padding: 18px;
+  }
+
+  .flood-form input,
+  .flood-form textarea,
+  .flood-form select {
+    font-size: 15px;
+  }
+}

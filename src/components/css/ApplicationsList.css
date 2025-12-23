@@ -1,0 +1,270 @@
+/* ---------------------------------------------------
+   MAIN CONTAINER
+--------------------------------------------------- */
+
+.applications-container {
+  padding: 20px;
+  background: #f5f6f8;
+  min-height: 100vh;
+}
+
+.applications-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+/* ---------------------------------------------------
+   FILTER ROW
+--------------------------------------------------- */
+.filter-row {
+  margin-bottom: 20px;
+}
+
+.filter-select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-size: 14px;
+}
+
+/* ---------------------------------------------------
+   LIST VIEW (instead of GRID)
+--------------------------------------------------- */
+
+.applications-table-container {
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll if needed */
+}
+
+.applications-table {
+  border-collapse: collapse;
+  width: max-content;  /* table width fits content */
+  min-width: 100%;     /* never smaller than container */
+}
+
+
+.applications-table th,
+.applications-table td {
+  border: 1px solid #d1d5db;
+  padding: 10px 12px;
+  text-align: left;
+  width: 10px;
+}
+
+.applications-table th {
+  background: #b01030;
+  color: white;
+  font-weight: 600;
+}
+
+.applications-table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.actions-cell button {
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+/* Keep your existing .status-pill and .admin-pill styles as they are */
+
+/* ---------------------------------------------------
+   CARD
+--------------------------------------------------- */
+.application-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.status-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ---------------------------------------------------
+   STATUS PILL (VERIFIER STATUS)
+--------------------------------------------------- */
+.status-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* Under Review (Yellow) */
+.status-under_review {
+  background: #facc15;
+  color: #1f2937;
+}
+
+/* Verified (Green) */
+.status-verified {
+  background: #22c55e;
+  color: white;
+}
+
+/* Rejected (Red) */
+.status-rejected {
+  background: #ef4444;
+  color: white;
+}
+
+/* ---------------------------------------------------
+   ADMIN PILL (ADMIN STATUS)
+--------------------------------------------------- */
+/* .admin-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.admin-pill.approved {
+  background: #4ade80;
+  color: white;
+}
+
+.admin-pill.rejected {
+  background: #dc2626;
+  color: white;
+}
+
+.admin-pill.no-admin {
+  background: #e5e7eb;
+  color: #374151;
+}
+ */
+
+/* ---------------------------------------------------
+   CARD ACTIONS
+--------------------------------------------------- */
+.card-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* BUTTONS */
+.view-btn,
+.approve-btn,
+.reject-btn,
+.close-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.view-btn {
+  background: #b01030;
+  color: white;
+}
+
+.list-approve-btn{
+  background: #16a34a;
+  color: white;
+  margin-right: 52px;
+  margin-top: 5px;
+}
+
+.list-reject-btn{
+  background: #dc2626;
+  color: white;
+}
+
+.close-btn {
+  background: #6b7280;
+  color: white;
+  
+}
+
+
+
+/* ---------------------------------------------------
+   INFO LABEL
+--------------------------------------------------- */
+.info-note {
+  font-size: 12px;
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #374151;
+  border-left: 3px solid #9ca3af;
+}
+
+/* ---------------------------------------------------
+   MODAL
+--------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 600px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content.scrollable {
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------------------------------------------------
+   IMAGES
+--------------------------------------------------- */
+.proof-images {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.proof-images img {
+  width: 100px;
+  border-radius: 10px;
+}
+.pending-excel-btn{background-color: #b01030}
+.pending-pdf-btn{background-color: #b01030}
+.delete-admin-actions{
+  background-color: #dc2626;
+  margin-top: 5px;
+}
