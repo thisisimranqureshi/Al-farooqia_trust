@@ -171,7 +171,8 @@ const ApplicationDetails = ({ app }) => {
       ["PP Number", app.ppNumber || ""],
       ["NA Number", app.naNumber || ""],
       ["Service Needed", app.serviceNeeded || ""],
-      ["Service Type", app.serviceType || ""][("Notes", app.notes || "--")],
+      ["Service Type", app.serviceType || ""],
+      ["Notes", app.notes || "--"],
     ];
 
     autoTable(doc, {
@@ -214,28 +215,7 @@ const ApplicationDetails = ({ app }) => {
       });
     }
 
-    //  ---------- Images Section ----------
-    for (let i = 0; i < mediaFields.length; i++) {
-      const media = mediaFields[i];
-      if (media.type !== "image") continue;
-
-      try {
-        const imgBase64 = await loadImageAsBase64(media.url);
-
-        if (y + 80 > pageHeight) {
-          doc.addPage();
-          y = 20;
-        }
-
-        doc.text(media.label, 14, y);
-        y += 5;
-
-        doc.addImage(imgBase64, "JPEG", 14, y, 80, 60);
-        y += 70;
-      } catch (err) {
-        console.error("Image failed:", err);
-      }
-    }
+  
 
     doc.save(`${app.name || "applicant"}_details.pdf`);
   };
@@ -488,39 +468,6 @@ const ApplicationDetails = ({ app }) => {
           </div>
         )}
       </div>
-
-      {/* Media */}
-      {mediaFields.length > 0 && (
-       <div className="application-media-section">
-       {mediaFields.map((m, i) =>
-         <div key={i} style={{ display: "inline-block", margin: "10px", textAlign: "center" }}>
-           {m.type === "image" ? (
-             <img
-               src={m.url}
-               alt={m.label}
-               className="media-img"
-               onClick={() => openLightbox(i)}
-               style={{ display: "block", width: "200px", height: "auto", cursor: "pointer" }}
-             />
-           ) : (
-             <video
-               src={m.url}
-               className="video-player"
-               controls
-               style={{ display: "block", width: "200px", cursor: "pointer" }}
-               onClick={() => openLightbox(i)}
-             />
-           )}
-           
-        
-         </div>
-       )}
-     </div>
-     
-      )}
-
-
-
       {/* Verifier Info */}
       {app.verifierInfo && (
         <div className="section">
@@ -566,6 +513,35 @@ const ApplicationDetails = ({ app }) => {
             </div>
           )}
         </div>
+      )}
+         {/* Media */}
+         {mediaFields.length > 0 && (
+       <div className="application-media-section">
+       {mediaFields.map((m, i) =>
+         <div key={i} style={{ display: "inline-block", margin: "10px", textAlign: "center" }}>
+           {m.type === "image" ? (
+             <img
+               src={m.url}
+               alt={m.label}
+               className="media-img"
+               onClick={() => openLightbox(i)}
+               style={{ display: "block", width: "200px", height: "auto", cursor: "pointer" }}
+             />
+           ) : (
+             <video
+               src={m.url}
+               className="video-player"
+               controls
+               style={{ display: "block", width: "200px", cursor: "pointer" }}
+               onClick={() => openLightbox(i)}
+             />
+           )}
+           
+        
+         </div>
+       )}
+     </div>
+     
       )}
 
       {/* Lightbox Modal */}
