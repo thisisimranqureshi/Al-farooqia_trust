@@ -219,59 +219,59 @@ const ApplicationDetails = ({ app }) => {
 
     doc.save(`${app.name || "applicant"}_details.pdf`);
   };
-  const downloadScreenshotPDF = async () => {
-    const element = document.querySelector(".application-details-container");
-    if (!element) return;
+  // const downloadScreenshotPDF = async () => {
+  //   const element = document.querySelector(".application-details-container");
+  //   if (!element) return;
   
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+  //   const originalOverflow = document.body.style.overflow;
+  //   document.body.style.overflow = "hidden";
   
-    // 🔥 convert images to base64
-    const originalImages = await convertImagesToBase64(element);
+  //   // 🔥 convert images to base64
+  //   const originalImages = await convertImagesToBase64(element);
   
-    const canvas = await html2canvas(element, {
-      scale: 2,
-      backgroundColor: "#fff",
-      useCORS: false,
-      allowTaint: false,
-      windowWidth: element.scrollWidth,
-      windowHeight: element.scrollHeight,
-      onclone: (doc) => {
-        doc.querySelectorAll("video").forEach(v => v.remove());
-        doc.querySelectorAll("button").forEach(b => b.style.display = "none");
-      }
-    });
+  //   const canvas = await html2canvas(element, {
+  //     scale: 2,
+  //     backgroundColor: "#fff",
+  //     useCORS: false,
+  //     allowTaint: false,
+  //     windowWidth: element.scrollWidth,
+  //     windowHeight: element.scrollHeight,
+  //     onclone: (doc) => {
+  //       doc.querySelectorAll("video").forEach(v => v.remove());
+  //       doc.querySelectorAll("button").forEach(b => b.style.display = "none");
+  //     }
+  //   });
   
-    // restore original images
-    originalImages.forEach((src, img) => {
-      img.src = src;
-    });
+  //   // restore original images
+  //   originalImages.forEach((src, img) => {
+  //     img.src = src;
+  //   });
   
-    document.body.style.overflow = originalOverflow;
+  //   document.body.style.overflow = originalOverflow;
   
-    const imgData = canvas.toDataURL("image/png");
+  //   const imgData = canvas.toDataURL("image/png");
   
-    const pdf = new jsPDF("p", "mm", "a4");
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = pdf.internal.pageSize.getHeight();
+  //   const pdf = new jsPDF("p", "mm", "a4");
+  //   const pdfWidth = pdf.internal.pageSize.getWidth();
+  //   const pdfHeight = pdf.internal.pageSize.getHeight();
   
-    const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+  //   const imgHeight = (canvas.height * pdfWidth) / canvas.width;
   
-    let heightLeft = imgHeight;
-    let position = 0;
+  //   let heightLeft = imgHeight;
+  //   let position = 0;
   
-    pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight);
-    heightLeft -= pdfHeight;
+  //   pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight);
+  //   heightLeft -= pdfHeight;
   
-    while (heightLeft > 0) {
-      position -= pdfHeight;
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight);
-      heightLeft -= pdfHeight;
-    }
+  //   while (heightLeft > 0) {
+  //     position -= pdfHeight;
+  //     pdf.addPage();
+  //     pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight);
+  //     heightLeft -= pdfHeight;
+  //   }
   
-    pdf.save(`${app.name || "application"}_screenshot.pdf`);
-  };
+  //   pdf.save(`${app.name || "application"}_screenshot.pdf`);
+  // };
 
  
   
@@ -282,7 +282,7 @@ const ApplicationDetails = ({ app }) => {
 
   return (
     <div className="application-details-container">
-      <button
+      {/* <button
         onClick={downloadScreenshotPDF}
         style={{
           marginBottom: "15px",
@@ -296,7 +296,7 @@ const ApplicationDetails = ({ app }) => {
         }}
       >
         Download Screenshot PDF
-      </button>
+      </button> */}
 
       <button
         onClick={downloadPDF}
